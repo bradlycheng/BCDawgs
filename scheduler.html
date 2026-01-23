@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Schedule your dog sitting appointment with BC Dawgs. Easy online booking with instant confirmation.">
+    <title>Book Appointment - BC Dawgs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🐾 BC DAWGS</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="merch.html">Merch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Scheduler Container -->
+    <div class="scheduler-container">
+        <div class="section-header">
+            <h1>Schedule Your Appointment</h1>
+            <p>Book your dog's next adventure with BC Dawgs. Choose the service that fits your needs and pick a time
+                that works for you.</p>
+        </div>
+
+        <!-- Service Overview -->
+        <div class="services-grid" style="margin: 2rem 0;">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Overnight Boarding</h3>
+                <p>Multi-day stays</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚪</div>
+                <h3>Drop-In Visits</h3>
+                <p>30 or 60 minutes</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🦮</div>
+                <h3>Dog Walking</h3>
+                <p>20-60 minute walks</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☀️</div>
+                <h3>Doggy Daycare</h3>
+                <p>Full day care</p>
+            </div>
+        </div>
+
+        <!-- Cal.com Embed Section -->
+        <div class="cal-embed-container">
+            <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--text-dark);">Select Your Service Below
+            </h2>
+
+            <!-- Cal inline embed code begins -->
+            <!-- Cal inline embed code begins -->
+            <div style="width:100%;min-height:800px;overflow:hidden" id="my-cal-inline"></div>
+            <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", { origin: "https://app.cal.com" });
+
+                Cal("inline", {
+                    elementOrSelector: "#my-cal-inline",
+                    calLink: "bradly-cheng-7omjaj",
+                    config: { "layout": "month_view" }
+                });
+
+                Cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+            </script>
+            <!-- Cal inline embed code ends -->
+
+            <p style="text-align: center; color: var(--text-muted); margin-top: 2rem;">
+                Questions? Contact us at <a href="mailto:info@bcdawgs.com"
+                    style="color: var(--primary-color); text-decoration: underline;">info@bcdawgs.com</a> or call (555)
+                123-4567
+            </p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn btn-outline">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BC Dawgs</h3>
+                <p>Your trusted partner in professional pet care. Serving our community with love, dedication, and
+                    expertise.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="scheduler.html">Book Appointment</a>
+                <a href="merch.html">Merch Store</a>
+                <a href="index.html#services">Services</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📧 Email: info@bcdawgs.com</p>
+                <p>📱 Phone: (555) 123-4567</p>
+                <p>📍 Service Area: Greater Metro Area</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BC Dawgs. All rights reserved. | Built with ❤️ for dogs</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
