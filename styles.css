@@ -11,42 +11,53 @@
 
 :root {
     /* Color Palette - Warm & Trustworthy */
-    --primary-color: #FF8C42;        /* Vibrant orange - energetic */
-    --primary-dark: #E67A32;         /* Darker orange for hover */
-    --secondary-color: #4A90E2;      /* Friendly blue */
-    --secondary-dark: #3A7BC8;       /* Darker blue */
-    --accent-color: #FFC857;         /* Warm yellow accent */
-    --dark-bg: #1A1A2E;              /* Deep navy background */
-    --light-bg: #F8F9FA;             /* Clean light background */
-    --text-dark: #2C3E50;            /* Dark text */
-    --text-light: #FFFFFF;           /* White text */
-    --text-muted: #6C757D;           /* Muted text */
-    --success-color: #28A745;        /* Green for positive actions */
-    
+    --primary-color: #FF8C42;
+    /* Vibrant orange - energetic */
+    --primary-dark: #E67A32;
+    /* Darker orange for hover */
+    --secondary-color: #4A90E2;
+    /* Friendly blue */
+    --secondary-dark: #3A7BC8;
+    /* Darker blue */
+    --accent-color: #FFC857;
+    /* Warm yellow accent */
+    --dark-bg: #1A1A2E;
+    /* Deep navy background */
+    --light-bg: #F8F9FA;
+    /* Clean light background */
+    --text-dark: #2C3E50;
+    /* Dark text */
+    --text-light: #FFFFFF;
+    /* White text */
+    --text-muted: #6C757D;
+    /* Muted text */
+    --success-color: #28A745;
+    /* Green for positive actions */
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #FF8C42 0%, #FFC857 100%);
     --gradient-secondary: linear-gradient(135deg, #4A90E2 0%, #667EEA 100%);
     --gradient-dark: linear-gradient(135deg, #1A1A2E 0%, #2C3E50 100%);
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 15px;
     --radius-lg: 25px;
     --radius-full: 50%;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
     --shadow-glow: 0 0 20px rgba(255, 140, 66, 0.3);
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -66,7 +77,12 @@ body {
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
@@ -380,6 +396,28 @@ p {
     transform: scale(1.1);
 }
 
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-normal);
+    font-weight: 600;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
 /* ========== ABOUT SECTION ========== */
 .about-content {
     display: grid;
@@ -591,6 +629,7 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -614,33 +653,33 @@ p {
         padding: var(--spacing-md);
         box-shadow: var(--shadow-md);
     }
-    
+
     .nav-links.active {
         display: flex;
     }
-    
+
     .menu-toggle {
         display: flex;
     }
-    
+
     .hero {
         margin-top: 60px;
         padding: var(--spacing-lg) var(--spacing-sm);
     }
-    
+
     .hero-buttons {
         flex-direction: column;
     }
-    
+
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .section {
         padding: var(--spacing-lg) var(--spacing-sm);
     }
@@ -650,11 +689,11 @@ p {
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.8rem;
     }
-    
+
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
