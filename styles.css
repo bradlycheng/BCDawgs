@@ -499,6 +499,22 @@ p {
     color: var(--text-dark);
 }
 
+.testimonial-featured {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFFFFF 100%);
+    border: 2px solid var(--primary-color);
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-featured .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
 /* ========== FOOTER ========== */
 .footer {
     background: var(--dark-bg);
