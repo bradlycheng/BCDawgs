@@ -321,6 +321,7 @@
         const prevBtn = document.getElementById('carouselPrev');
         const nextBtn = document.getElementById('carouselNext');
         let currentSlide = 0;
+        let slideInterval;
 
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -330,13 +331,39 @@
             dots[currentSlide].classList.add('active');
         }
 
-        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(slideInterval);
+            startAutoSlide();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+            resetAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+            resetAutoSlide();
+        });
 
         // Dot click navigation
         dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showSlide(index));
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                resetAutoSlide();
+            });
         });
+
+        // Start auto-play
+        startAutoSlide();
     </script>
 </body>
 
