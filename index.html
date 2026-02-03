@@ -96,8 +96,6 @@
         <div class="hero-carousel">
             <div class="slide active"
                 style="background-image: url('images/discord1.jpg'); background-position: center 30%;"></div>
-            <div class="slide" style="background-image: url('images/dogandcat.jpg'); background-position: 80% 80%;">
-            </div>
             <div class="slide" style="background-image: url('images/discord2.jpg'); background-position: center 25%;">
             </div>
             <div class="slide" style="background-image: url('images/discord3.jpg'); background-position: center 35%;">
@@ -117,9 +115,8 @@
             <div class="slide" style="background-image: url('images/discord8.jpg'); background-position: center 30%;">
             </div>
         </div>
-        <!-- Navigation Arrows -->
-        <button class="carousel-btn carousel-btn-left" id="carouselPrev" aria-label="Previous slide">&#10094;</button>
-        <button class="carousel-btn carousel-btn-right" id="carouselNext" aria-label="Next slide">&#10095;</button>
+        </div>
+        <!-- Navigation Arrows Removed -->
         <div class="carousel-indicators">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -381,8 +378,6 @@
         // Hero Carousel Navigation
         const slides = document.querySelectorAll('.hero-carousel .slide');
         const dots = document.querySelectorAll('.carousel-indicators .dot');
-        const prevBtn = document.getElementById('carouselPrev');
-        const nextBtn = document.getElementById('carouselNext');
         let currentSlide = 0;
         let slideInterval;
 
@@ -406,16 +401,6 @@
             clearInterval(slideInterval);
             startAutoSlide();
         }
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(currentSlide - 1);
-            resetAutoSlide();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            showSlide(currentSlide + 1);
-            resetAutoSlide();
-        });
 
         // Dot click navigation
         dots.forEach((dot, index) => {
