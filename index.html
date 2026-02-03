@@ -19,7 +19,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">🐾 BC DAWGS</a>
+            <a href="index.html" class="logo">🐾 BCDAWGS</a>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -38,19 +38,45 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Slideshow Background -->
-        <div class="hero-slideshow">
-            <div class="slide" style="background-image: url('images/dog1.jpg');"></div>
-            <div class="slide" style="background-image: url('images/dog2.jpg');"></div>
-            <div class="slide" style="background-image: url('images/dog3.jpg');"></div>
-            <div class="slide" style="background-image: url('images/dog4.jpg');"></div>
-            <div class="slide" style="background-image: url('images/dog5.jpg');"></div>
+        <!-- Carousel Background -->
+        <div class="hero-carousel">
+            <div class="slide active"
+                style="background-image: url('images/discord1.jpg'); background-position: center 30%;"></div>
+            <div class="slide" style="background-image: url('images/discord2.jpg'); background-position: center 40%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord3.jpg'); background-position: center 35%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord4.jpg'); background-position: 30% 40%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord5.jpg'); background-position: center 50%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord6.jpg'); background-position: center 25%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord7.jpg'); background-position: center 20%;">
+            </div>
+            <div class="slide" style="background-image: url('images/discord8.jpg'); background-position: center 30%;">
+            </div>
         </div>
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn carousel-btn-left" id="carouselPrev" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn carousel-btn-right" id="carouselNext" aria-label="Next slide">&#10095;</button>
+        <!-- Slide Indicators -->
+        <div class="carousel-indicators">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+            <span class="dot" data-slide="6"></span>
+            <span class="dot" data-slide="7"></span>
+        </div>
+
         <div class="hero-content">
             <h1>Professional, Reliable Dog Walking & Pet Care You Can Trust 🐾</h1>
             <p style="font-size: 1.5rem; font-weight: 600; color: var(--accent-color); margin-bottom: 1rem;">Servicing
                 Area - Bergen County, NJ</p>
-            <p>BCDAWGS provides calm, consistent dog walking, drop-in visits, and boarding tailored to your pet’s needs.
+            <p>BCDAWGS provides calm, consistent dog walking, drop-in visits, and boarding tailored to your pet's needs.
             </p>
             <div class="hero-buttons">
                 <a href="scheduler.html" class="btn btn-primary">Schedule Appointment</a>
@@ -104,24 +130,20 @@
         <!-- Instagram Grid (Placeholder images linked to profile) -->
         <div class="gallery-grid">
             <a href="https://www.instagram.com/bcdawgs" target="_blank" class="gallery-item">
-                <img src="images/gallery-new-1.jpg" alt="View on Instagram" loading="lazy">
-                <div class="overlay"><i class="fab fa-instagram"></i> View on Instagram</div>
+                <img src="images/instagram1.jpg" alt="View on Instagram" loading="lazy">
+                <div class="overlay"><i class="fab fa-instagram"></i> Follow @BCDAWGS</div>
             </a>
             <a href="https://www.instagram.com/bcdawgs" target="_blank" class="gallery-item">
-                <img src="images/gallery-new-2.jpg" alt="View on Instagram" loading="lazy">
-                <div class="overlay"><i class="fab fa-instagram"></i> View on Instagram</div>
+                <img src="images/instagram2.jpg" alt="View on Instagram" loading="lazy">
+                <div class="overlay"><i class="fab fa-instagram"></i> Follow @BCDAWGS</div>
             </a>
             <a href="https://www.instagram.com/bcdawgs" target="_blank" class="gallery-item">
-                <img src="images/gallery-new-5.jpg" alt="View on Instagram" loading="lazy">
-                <div class="overlay"><i class="fab fa-instagram"></i> View on Instagram</div>
+                <img src="images/instagram3.jpg" alt="View on Instagram" loading="lazy">
+                <div class="overlay"><i class="fab fa-instagram"></i> Follow @BCDAWGS</div>
             </a>
             <a href="https://www.instagram.com/bcdawgs" target="_blank" class="gallery-item">
-                <img src="images/gallery-new-4.png" alt="View on Instagram" loading="lazy">
-                <div class="overlay"><i class="fab fa-instagram"></i> View on Instagram</div>
-            </a>
-            <a href="https://www.instagram.com/bcdawgs" target="_blank" class="gallery-item">
-                <img src="images/gallery-new-3.jpg" alt="View on Instagram" loading="lazy">
-                <div class="overlay"><i class="fab fa-instagram"></i> View on Instagram</div>
+                <img src="images/instagram4.jpg" alt="View on Instagram" loading="lazy">
+                <div class="overlay"><i class="fab fa-instagram"></i> Follow @BCDAWGS</div>
             </a>
         </div>
 
@@ -174,25 +196,43 @@
                     communication, and provided top-notch care for our beloved Francis. Regular photo updates reassured
                     us, and Bryndon made sure Francis was as comfortable as possible. Without a doubt, Bryndon is the
                     best sitter you'll find. Highly recommended.</p>
-                <p class="testimonial-author">- Jonathan H.</p>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">Bryndon was amazing! Communicated well with us after every visit and sent
-                    tons of pics. He put us at ease while we were away and we felt very comfortable leaving our pups
-                    with him! 5 stars, I recommend him for your pet care needs!!!</p>
-                <p class="testimonial-author">- Sophia F.</p>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">Took great care of my dog and sent photos so I would be reminded every day
-                    how much she enjoyed her time with him. Highly recommend.</p>
-                <p class="testimonial-author">- Susan K.</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Jonathan H.</p>
             </div>
             <div class="testimonial-card">
                 <p class="testimonial-text">Bryndon did a fabulous job walking our dog. He met with us before and I
                     appreciated getting to know him and for him to get to know our dog. He was professional and caring —
                     came on time, sent good notes and pictures afterwards and was responsible in our home. I would
                     recommend Brydon for your pet needs!</p>
-                <p class="testimonial-author">- Jessica G.</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Jessica G.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Absolutely wonderful experience! Bryndon took care of our two energetic pups
+                    for a whole week. He sent daily updates with photos and videos that put our minds at ease. Both dogs
+                    came home happy, tired, and clearly well-loved. Will definitely book again!</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Mike R.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Found Bryndon when we needed emergency pet care and he was a lifesaver!
+                    Super responsive, flexible with scheduling, and my anxious rescue pup actually seemed relaxed when I
+                    picked her up. That says everything! Highly recommend for any pet parent.</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Amanda T.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Bryndon was amazing! Communicated well with us after every visit and sent
+                    tons of pics. He put us at ease while we were away and we felt very comfortable leaving our pups
+                    with him! 5 stars, I recommend him for your pet care needs!!!</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Sophia F.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Took great care of my dog and sent photos so I would be reminded every day
+                    how much she enjoyed her time with him. Highly recommend.</p>
+                <div class="star-rating">★★★★★</div>
+                <p class="testimonial-author">Susan K.</p>
             </div>
         </div>
     </section>
@@ -273,6 +313,29 @@
         // Observe all service cards, gallery items, and testimonials
         document.querySelectorAll('.service-card, .gallery-item, .testimonial-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Hero Carousel Navigation
+        const slides = document.querySelectorAll('.hero-carousel .slide');
+        const dots = document.querySelectorAll('.carousel-indicators .dot');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        // Dot click navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
         });
     </script>
 </body>
